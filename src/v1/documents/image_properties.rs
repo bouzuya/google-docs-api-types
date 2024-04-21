@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::CropProperties;
+use crate::v1::documents::CropProperties;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#imageproperties>
 #[derive(Clone, Debug, PartialEq, serde::Deserialize, serde::Serialize)]

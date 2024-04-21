@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::{Paragraph, SectionBreak, Table, TableOfContents};
+use crate::v1::documents::{Paragraph, SectionBreak, Table, TableOfContents};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#structuralelement>
 #[allow(clippy::large_enum_variant)]

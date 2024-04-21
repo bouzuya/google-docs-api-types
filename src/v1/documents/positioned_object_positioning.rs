@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::{Dimension, PositionedObjectLayout};
+use crate::v1::documents::{Dimension, PositionedObjectLayout};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#positionedobjectpositioning>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

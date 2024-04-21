@@ -23,7 +23,7 @@ pub enum DashStyle {
 
 #[cfg(test)]
 mod tests {
-    use crate::google_docs_client::tests::test_serde;
+    use crate::tests::test_serde;
 
     use super::*;
 
@@ -31,12 +31,12 @@ mod tests {
     fn test() -> anyhow::Result<()> {
         for (s, v) in [
             (
-                r#""DASH_STYLE_UNSPECIFIED"#,
+                r#""DASH_STYLE_UNSPECIFIED""#,
                 DashStyle::DashStyleUnspecified,
             ),
-            (r#""SOLID"#, DashStyle::Solid),
-            (r#""DOT"#, DashStyle::Dot),
-            (r#""DASH"#, DashStyle::Dash),
+            (r#""SOLID""#, DashStyle::Solid),
+            (r#""DOT""#, DashStyle::Dot),
+            (r#""DASH""#, DashStyle::Dash),
         ] {
             test_serde(s, v)?;
         }

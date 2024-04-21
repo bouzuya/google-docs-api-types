@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use crate::google_docs_client::v1::documents::{RichLinkProperties, SuggestedTextStyle, TextStyle};
+use crate::v1::documents::{RichLinkProperties, SuggestedTextStyle, TextStyle};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#richlink>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

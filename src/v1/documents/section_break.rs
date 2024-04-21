@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::SectionStyle;
+use crate::v1::documents::SectionStyle;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#sectionbreak>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

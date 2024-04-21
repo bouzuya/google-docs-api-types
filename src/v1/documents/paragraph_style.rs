@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::{
+use crate::v1::documents::{
     Alignment, ContentDirection, Dimension, NamedStyleType, ParagraphBorder, Shading, SpacingMode,
     TabStop,
 };

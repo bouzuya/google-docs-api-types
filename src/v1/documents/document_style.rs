@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::{Background, Dimension, Size};
+use crate::v1::documents::{Background, Dimension, Size};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#documentstyle>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

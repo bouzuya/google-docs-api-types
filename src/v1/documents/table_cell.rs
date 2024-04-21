@@ -1,8 +1,6 @@
 use std::collections::HashMap;
 
-use crate::google_docs_client::v1::documents::{
-    StructuralElement, SuggestedTableCellStyle, TableCellStyle,
-};
+use crate::v1::documents::{StructuralElement, SuggestedTableCellStyle, TableCellStyle};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#tablecell>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

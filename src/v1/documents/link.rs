@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::LinkDestination;
+use crate::v1::documents::LinkDestination;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#link>
 #[derive(Clone, Debug, Default, PartialEq, PartialOrd, serde::Deserialize, serde::Serialize)]
@@ -10,7 +10,7 @@ pub struct Link {
 
 #[cfg(test)]
 mod tests {
-    use crate::google_docs_client::tests::test_serde;
+    use crate::tests::test_serde;
 
     use super::*;
 

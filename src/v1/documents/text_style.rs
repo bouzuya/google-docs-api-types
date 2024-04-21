@@ -1,6 +1,4 @@
-use crate::google_docs_client::v1::documents::{
-    BaselineOffset, Dimension, Link, OptionalColor, WeightedFontFamily,
-};
+use crate::v1::documents::{BaselineOffset, Dimension, Link, OptionalColor, WeightedFontFamily};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#textstyle>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

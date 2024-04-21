@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::Unit;
+use crate::v1::documents::Unit;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#dimension>
 #[derive(Clone, Debug, PartialEq, serde::Deserialize, serde::Serialize)]
@@ -13,7 +13,7 @@ pub struct Dimension {
 mod tests {
     use anyhow::Context as _;
 
-    use crate::google_docs_client::tests::test_serde;
+    use crate::tests::test_serde;
 
     use super::*;
 

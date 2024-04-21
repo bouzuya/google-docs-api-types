@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::NamedRange;
+use crate::v1::documents::NamedRange;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#namedranges>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

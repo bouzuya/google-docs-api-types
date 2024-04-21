@@ -1,8 +1,6 @@
 use std::collections::HashMap;
 
-use crate::google_docs_client::v1::documents::{
-    PositionedObjectProperties, SuggestedPositionedObjectProperties,
-};
+use crate::v1::documents::{PositionedObjectProperties, SuggestedPositionedObjectProperties};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#positionedobject>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

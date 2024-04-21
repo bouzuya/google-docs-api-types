@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::LinkedContentReferenceReference;
+use crate::v1::documents::LinkedContentReferenceReference;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#linkedcontentreference>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

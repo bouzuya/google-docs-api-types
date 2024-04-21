@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::Color;
+use crate::v1::documents::Color;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#optionalcolor>
 #[derive(Clone, Debug, Default, PartialEq, PartialOrd, serde::Deserialize, serde::Serialize)]

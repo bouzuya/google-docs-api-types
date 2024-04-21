@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use crate::google_docs_client::v1::documents::{
+use crate::v1::documents::{
     Bullet, ObjectReferences, ParagraphElement, ParagraphStyle, SuggestedBullet,
     SuggestedParagraphStyle,
 };

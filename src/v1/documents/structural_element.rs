@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::StructuralElementContent;
+use crate::v1::documents::StructuralElementContent;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#structuralelement>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
@@ -14,7 +14,7 @@ pub struct StructuralElement {
 
 #[cfg(test)]
 mod tests {
-    use crate::google_docs_client::{
+    use crate::{
         tests::test_serde,
         v1::documents::{
             ColumnSeparatorStyle, ContentDirection, NamedStyleType, Paragraph, ParagraphElement,

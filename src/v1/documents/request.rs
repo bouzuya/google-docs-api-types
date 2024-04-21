@@ -1,5 +1,5 @@
-use crate::google_docs_client::v1::documents::Range;
-use crate::google_docs_client::v1::documents::Size;
+use crate::v1::documents::Range;
+use crate::v1::documents::Size;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents/request#request>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

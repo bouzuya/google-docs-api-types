@@ -1,6 +1,4 @@
-use crate::google_docs_client::v1::documents::{
-    DashStyle, Dimension, OptionalColor, PropertyState,
-};
+use crate::v1::documents::{DashStyle, Dimension, OptionalColor, PropertyState};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#embeddedobjectborder>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

@@ -1,6 +1,4 @@
-use crate::google_docs_client::v1::documents::{
-    ContentAlignment, Dimension, OptionalColor, TableCellBorder,
-};
+use crate::v1::documents::{ContentAlignment, Dimension, OptionalColor, TableCellBorder};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#tablecellstyle>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

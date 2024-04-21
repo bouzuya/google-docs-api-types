@@ -1,8 +1,6 @@
 use std::collections::HashMap;
 
-use crate::google_docs_client::v1::documents::{
-    InlineObjectProperties, SuggestedInlineObjectProperties,
-};
+use crate::v1::documents::{InlineObjectProperties, SuggestedInlineObjectProperties};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#inlineobject>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

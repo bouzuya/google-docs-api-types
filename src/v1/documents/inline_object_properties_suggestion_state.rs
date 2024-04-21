@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::EmbeddedObjectSuggestionState;
+use crate::v1::documents::EmbeddedObjectSuggestionState;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#inlineobjectpropertiessuggestionstate>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

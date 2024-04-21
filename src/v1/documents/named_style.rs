@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::{NamedStyleType, ParagraphStyle, TextStyle};
+use crate::v1::documents::{NamedStyleType, ParagraphStyle, TextStyle};
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#namedstyle>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::TextStyleSuggestionState;
+use crate::v1::documents::TextStyleSuggestionState;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#nestinglevelsuggestionstate>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

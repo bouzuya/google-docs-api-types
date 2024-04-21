@@ -25,7 +25,7 @@ pub enum ContentAlignment {
 
 #[cfg(test)]
 mod tests {
-    use crate::google_docs_client::tests::test_serde;
+    use crate::tests::test_serde;
 
     use super::*;
 

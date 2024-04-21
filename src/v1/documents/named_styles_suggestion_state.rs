@@ -1,4 +1,4 @@
-use crate::google_docs_client::v1::documents::NamedStyleSuggestionState;
+use crate::v1::documents::NamedStyleSuggestionState;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents#namedstylessuggestionstate>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]

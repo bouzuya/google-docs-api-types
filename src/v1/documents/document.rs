@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use crate::google_docs_client::v1::documents::{
+use crate::v1::documents::{
     Body, DocumentStyle, Footer, Footnote, Header, InlineObject, List, NamedRanges, NamedStyles,
     PositionedObject, SuggestedDocumentStyle, SuggestedNamedStyles, SuggestionsViewMode,
 };
