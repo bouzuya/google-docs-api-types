@@ -5,7 +5,7 @@ authors = ["bouzuya <m@bouzuya.net>"]
 description = "A library crate that provides types for the Google Docs API (unofficial)"
 edition = "2021"
 exclude = [".github", "docs"]
-keywords = ["firestore", "gcloud", "google", "path"]
+keywords = ["api", "docs", "gcloud", "google", "serde"]
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/bouzuya/google-docs-api-types"
 
