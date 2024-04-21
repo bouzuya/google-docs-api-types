@@ -1,9 +1,13 @@
 [package]
 name = "google-docs-api-types"
-version = "0.1.0"
+version = "0.0.0"
+authors = ["bouzuya <m@bouzuya.net>"]
+description = "A library crate that provides types for the Google Docs API (unofficial)"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+exclude = [".github", "docs"]
+keywords = ["firestore", "gcloud", "google", "path"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/bouzuya/google-docs-api-types"
 
 [dependencies]
 serde = { version = "1.0.198", features = ["derive"] }
