@@ -1,5 +1,26 @@
-use crate::v1::documents::Range;
-use crate::v1::documents::Size;
+mod delete_content_range_request;
+mod end_of_segument_location;
+mod insert_inline_image_request;
+mod insert_inline_image_request_insertion_location;
+mod insert_text_request;
+mod insert_text_request_insertion_location;
+mod location;
+mod replace_all_text_request;
+mod replace_all_text_request_criteria;
+mod request_request;
+mod substring_match_criteria;
+
+pub use self::delete_content_range_request::DeleteContentRangeRequest;
+pub use self::end_of_segument_location::EndOfSegmentLocation;
+pub use self::insert_inline_image_request::InsertInlineImageRequest;
+pub use self::insert_inline_image_request_insertion_location::InsertInlineImageRequestInsertionLocation;
+pub use self::insert_text_request::InsertTextRequest;
+pub use self::insert_text_request_insertion_location::InsertTextRequestInsertionLocation;
+pub use self::location::Location;
+pub use self::replace_all_text_request::ReplaceAllTextRequest;
+pub use self::replace_all_text_request_criteria::ReplaceAllTextRequestCriteria;
+pub use self::request_request::RequestRequest;
+pub use self::substring_match_criteria::SubstringMatchCriteria;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents/request#request>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
@@ -7,91 +28,4 @@ use crate::v1::documents::Size;
 pub struct Request {
     #[serde(flatten)]
     pub request: Option<RequestRequest>,
-}
-
-#[derive(Clone, Debug, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub enum RequestRequest {
-    ReplaceAllText(ReplaceAllTextRequest),
-    InsertText(InsertTextRequest),
-    // TODO: ...
-    DeleteContentRange(DeleteContentRangeRequest),
-    InsertInlineImage(InsertInlineImageRequest),
-    // TODO: ...
-}
-
-/// <https://developers.google.com/docs/api/reference/rest/v1/documents/request#replacealltextrequest>
-#[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct ReplaceAllTextRequest {
-    pub replace_text: Option<String>,
-    #[serde(flatten)]
-    pub criteria: Option<ReplaceAllTextRequestCriteria>,
-}
-
-/// <https://developers.google.com/docs/api/reference/rest/v1/documents/request#replacealltextrequest>
-#[derive(Clone, Debug, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub enum ReplaceAllTextRequestCriteria {
-    ContainsText(SubstringMatchCriteria),
-}
-
-/// <https://developers.google.com/docs/api/reference/rest/v1/documents/request#substringmatchcriteria>
-#[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct SubstringMatchCriteria {
-    pub text: Option<String>,
-    pub match_case: Option<bool>,
-}
-
-/// <https://developers.google.com/docs/api/reference/rest/v1/documents/request#insertinlineimagerequest>
-#[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct InsertInlineImageRequest {
-    pub uri: Option<String>,
-    pub object_size: Option<Size>,
-    #[serde(flatten)]
-    pub insertion_location: Option<InsertInlineImageRequestInsertionLocation>,
-}
-
-/// <https://developers.google.com/docs/api/reference/rest/v1/documents/request#insertinlineimagerequest>
-#[derive(Clone, Debug, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub enum InsertInlineImageRequestInsertionLocation {
-    Location(Location),
-    EndOfSegmentLocation(EndOfSegmentLocation),
-}
-
-#[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct DeleteContentRangeRequest {
-    pub range: Option<Range>,
-}
-
-#[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct InsertTextRequest {
-    pub text: Option<String>,
-    #[serde(flatten)]
-    pub insertion_location: Option<InsertTextRequestInsertionLocation>,
-}
-
-#[derive(Clone, Debug, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub enum InsertTextRequestInsertionLocation {
-    Location(Location),
-    EndOfSegmentLocation(EndOfSegmentLocation),
-}
-
-#[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct Location {
-    pub segment_id: Option<String>,
-    pub index: Option<usize>,
-}
-
-#[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
-#[serde(rename_all = "camelCase")]
-pub struct EndOfSegmentLocation {
-    pub segment_id: Option<String>,
 }
