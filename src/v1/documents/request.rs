@@ -9,6 +9,8 @@ mod replace_all_text_request;
 mod replace_all_text_request_criteria;
 mod request_request;
 mod substring_match_criteria;
+mod update_text_style_request;
+mod update_text_style_request_insertion_location;
 
 pub use self::delete_content_range_request::DeleteContentRangeRequest;
 pub use self::end_of_segument_location::EndOfSegmentLocation;
@@ -21,6 +23,8 @@ pub use self::replace_all_text_request::ReplaceAllTextRequest;
 pub use self::replace_all_text_request_criteria::ReplaceAllTextRequestCriteria;
 pub use self::request_request::RequestRequest;
 pub use self::substring_match_criteria::SubstringMatchCriteria;
+pub use self::update_text_style_request::UpdateTextStyleRequest;
+pub use self::update_text_style_request_insertion_location::UpdateTextStyleRequestInsertionLocation;
 
 /// <https://developers.google.com/docs/api/reference/rest/v1/documents/request#request>
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
