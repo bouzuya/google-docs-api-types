@@ -1,3 +1,5 @@
+mod bullet_glyph_preset;
+mod create_paragraph_bullets_request;
 mod delete_content_range_request;
 mod end_of_segument_location;
 mod insert_inline_image_request;
@@ -12,6 +14,8 @@ mod substring_match_criteria;
 mod update_text_style_request;
 mod update_text_style_request_insertion_location;
 
+pub use self::bullet_glyph_preset::BulletGlyphPreset;
+pub use self::create_paragraph_bullets_request::CreateParagraphBulletsRequest;
 pub use self::delete_content_range_request::DeleteContentRangeRequest;
 pub use self::end_of_segument_location::EndOfSegmentLocation;
 pub use self::insert_inline_image_request::InsertInlineImageRequest;

@@ -1,3 +1,4 @@
+use crate::v1::documents::request::CreateParagraphBulletsRequest;
 use crate::v1::documents::request::DeleteContentRangeRequest;
 use crate::v1::documents::request::InsertInlineImageRequest;
 use crate::v1::documents::request::InsertTextRequest;
@@ -10,6 +11,7 @@ pub enum RequestRequest {
     ReplaceAllText(ReplaceAllTextRequest),
     InsertText(InsertTextRequest),
     UpdateTextStyle(UpdateTextStyleRequest),
+    CreateParagraphBullets(CreateParagraphBulletsRequest),
     // TODO: ...
     DeleteContentRange(DeleteContentRangeRequest),
     InsertInlineImage(InsertInlineImageRequest),
