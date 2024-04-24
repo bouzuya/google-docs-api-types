@@ -17,6 +17,22 @@ fn test_create_paragraph_bullets_request() {
 }
 
 #[test]
+fn test_delete_paragraph_bullets_request() {
+    // Adds DeleteParagraphBulletsRequest
+    use google_docs_api_types::v1::documents::request::DeleteParagraphBulletsRequest;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::Range;
+    let _ = Request {
+        request: Some(RequestRequest::DeleteParagraphBullets(
+            DeleteParagraphBulletsRequest {
+                range: Some(Range::default()),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_update_text_style_request() {
     // Adds UpdateTextStyleRequest and UpdateTextStyleRequestInsertionLocation
     use google_docs_api_types::v1::documents::request::Request;
