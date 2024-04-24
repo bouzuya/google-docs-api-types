@@ -1,3 +1,5 @@
+use google_docs_api_types::v1::documents::request::CreateNamedRangeRequest;
+
 #[test]
 fn test_create_paragraph_bullets_request() {
     // Adds CreateParagraphBulletsRequest and BulletGlyphPreset
@@ -13,6 +15,20 @@ fn test_create_paragraph_bullets_request() {
                 bullet_preset: Some(BulletGlyphPreset::default()),
             },
         )),
+    };
+}
+
+#[test]
+fn test_create_named_range_request() {
+    // Adds CreateNamedRangeRequest
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::Range;
+    let _ = Request {
+        request: Some(RequestRequest::CreateNamedRange(CreateNamedRangeRequest {
+            name: Some(String::default()),
+            range: Some(Range::default()),
+        })),
     };
 }
 

@@ -1,4 +1,5 @@
 mod bullet_glyph_preset;
+mod create_named_range_request;
 mod create_paragraph_bullets_request;
 mod delete_content_range_request;
 mod delete_paragraph_bullets_request;
@@ -16,6 +17,7 @@ mod update_text_style_request;
 mod update_text_style_request_insertion_location;
 
 pub use self::bullet_glyph_preset::BulletGlyphPreset;
+pub use self::create_named_range_request::CreateNamedRangeRequest;
 pub use self::create_paragraph_bullets_request::CreateParagraphBulletsRequest;
 pub use self::delete_content_range_request::DeleteContentRangeRequest;
 pub use self::delete_paragraph_bullets_request::DeleteParagraphBulletsRequest;
