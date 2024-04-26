@@ -31,6 +31,21 @@ fn test_create_named_range_request() {
         })),
     };
 }
+#[test]
+fn test_delete_named_range_request() {
+    // Adds DeleteNamedRangeRequest and DeleteNamedRangeRequestNamedRangeReference
+    use google_docs_api_types::v1::documents::request::DeleteNamedRangeRequest;
+    use google_docs_api_types::v1::documents::request::DeleteNamedRangeRequestNamedRangeReference;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::DeleteNamedRange(DeleteNamedRangeRequest {
+            named_range_reference: Some(DeleteNamedRangeRequestNamedRangeReference::NamedRangeId(
+                String::default(),
+            )),
+        })),
+    };
+}
 
 #[test]
 fn test_delete_paragraph_bullets_request() {
