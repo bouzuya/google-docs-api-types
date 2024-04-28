@@ -1,5 +1,3 @@
-use google_docs_api_types::v1::documents::request::CreateNamedRangeRequest;
-
 #[test]
 fn test_create_paragraph_bullets_request() {
     // Adds CreateParagraphBulletsRequest and BulletGlyphPreset
@@ -21,6 +19,7 @@ fn test_create_paragraph_bullets_request() {
 #[test]
 fn test_create_named_range_request() {
     // Adds CreateNamedRangeRequest
+    use google_docs_api_types::v1::documents::request::CreateNamedRangeRequest;
     use google_docs_api_types::v1::documents::request::Request;
     use google_docs_api_types::v1::documents::request::RequestRequest;
     use google_docs_api_types::v1::documents::Range;
@@ -58,6 +57,28 @@ fn test_delete_paragraph_bullets_request() {
         request: Some(RequestRequest::DeleteParagraphBullets(
             DeleteParagraphBulletsRequest {
                 range: Some(Range::default()),
+            },
+        )),
+    };
+}
+
+#[test]
+fn test_update_paragraph_style_request() {
+    // Adds UpdateParagraphStyleRequest and UpdateParagraphStyleRequestInsertionLocation
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::UpdateParagraphStyleRequest;
+    use google_docs_api_types::v1::documents::request::UpdateParagraphStyleRequestInsertionLocation;
+    use google_docs_api_types::v1::documents::ParagraphStyle;
+    use google_docs_api_types::v1::documents::Range;
+    let _ = Request {
+        request: Some(RequestRequest::UpdateParagraphStyle(
+            UpdateParagraphStyleRequest {
+                paragraph_style: Some(ParagraphStyle::default()),
+                fields: Some(String::default()),
+                insertion_location: Some(UpdateParagraphStyleRequestInsertionLocation::Range(
+                    Range::default(),
+                )),
             },
         )),
     };

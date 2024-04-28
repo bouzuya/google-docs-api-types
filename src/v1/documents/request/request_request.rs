@@ -6,6 +6,7 @@ use crate::v1::documents::request::DeleteParagraphBulletsRequest;
 use crate::v1::documents::request::InsertInlineImageRequest;
 use crate::v1::documents::request::InsertTextRequest;
 use crate::v1::documents::request::ReplaceAllTextRequest;
+use crate::v1::documents::request::UpdateParagraphStyleRequest;
 use crate::v1::documents::request::UpdateTextStyleRequest;
 
 #[derive(Clone, Debug, PartialEq, serde::Deserialize, serde::Serialize)]
@@ -18,6 +19,7 @@ pub enum RequestRequest {
     DeleteParagraphBullets(DeleteParagraphBulletsRequest),
     CreateNamedRange(CreateNamedRangeRequest),
     DeleteNamedRange(DeleteNamedRangeRequest),
+    UpdateParagraphStyle(UpdateParagraphStyleRequest),
     // TODO: ...
     DeleteContentRange(DeleteContentRangeRequest),
     InsertInlineImage(InsertInlineImageRequest),
