@@ -83,6 +83,26 @@ fn test_insert_table_request() {
 }
 
 #[test]
+fn test_insert_table_row_request() {
+    // Adds InsertTableRowRequest and TableCellLocation
+    use google_docs_api_types::v1::documents::request::InsertTableRowRequest;
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::TableCellLocation;
+    let _ = Request {
+        request: Some(RequestRequest::InsertTableRow(InsertTableRowRequest {
+            table_cell_location: Some(TableCellLocation {
+                table_start_location: Some(Location::default()),
+                row_index: Some(usize::default()),
+                column_index: Some(usize::default()),
+            }),
+            insert_below: Some(bool::default()),
+        })),
+    };
+}
+
+#[test]
 fn test_update_paragraph_style_request() {
     // Adds UpdateParagraphStyleRequest and UpdateParagraphStyleRequestInsertionLocation
     use google_docs_api_types::v1::documents::request::Request;
