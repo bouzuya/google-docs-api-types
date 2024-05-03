@@ -4,6 +4,7 @@ use crate::v1::documents::request::DeleteContentRangeRequest;
 use crate::v1::documents::request::DeleteNamedRangeRequest;
 use crate::v1::documents::request::DeleteParagraphBulletsRequest;
 use crate::v1::documents::request::InsertInlineImageRequest;
+use crate::v1::documents::request::InsertTableColumnRequest;
 use crate::v1::documents::request::InsertTableRequest;
 use crate::v1::documents::request::InsertTableRowRequest;
 use crate::v1::documents::request::InsertTextRequest;
@@ -27,5 +28,6 @@ pub enum RequestRequest {
     InsertInlineImage(InsertInlineImageRequest),
     InsertTable(InsertTableRequest),
     InsertTableRow(InsertTableRowRequest),
+    InsertTableColumn(InsertTableColumnRequest),
     // TODO: ...
 }
