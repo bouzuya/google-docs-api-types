@@ -64,6 +64,25 @@ fn test_delete_paragraph_bullets_request() {
 }
 
 #[test]
+fn test_delete_table_row_request() {
+    // Adds DeleteTableRowRequest
+    use google_docs_api_types::v1::documents::request::DeleteTableRowRequest;
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::TableCellLocation;
+    let _ = Request {
+        request: Some(RequestRequest::DeleteTableRow(DeleteTableRowRequest {
+            table_cell_location: Some(TableCellLocation {
+                table_start_location: Some(Location::default()),
+                row_index: Some(usize::default()),
+                column_index: Some(usize::default()),
+            }),
+        })),
+    };
+}
+
+#[test]
 fn test_insert_table_column_request() {
     // Adds InsertTableColumnRequest
     use google_docs_api_types::v1::documents::request::InsertTableColumnRequest;
