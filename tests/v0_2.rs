@@ -64,6 +64,21 @@ fn test_delete_paragraph_bullets_request() {
 }
 
 #[test]
+fn test_delete_positioned_object_request() {
+    // Adds DeletePositionedObjectRequest
+    use google_docs_api_types::v1::documents::request::DeletePositionedObjectRequest;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::DeletePositionedObject(
+            DeletePositionedObjectRequest {
+                object_id: Some(String::default()),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_delete_table_column_request() {
     // Adds DeleteTableColumnRequest
     use google_docs_api_types::v1::documents::request::DeleteTableColumnRequest;
