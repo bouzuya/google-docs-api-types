@@ -27,6 +27,7 @@ mod substring_match_criteria;
 mod table_cell_location;
 mod update_paragraph_style_request;
 mod update_paragraph_style_request_insertion_loccation;
+mod update_table_column_properties_request;
 mod update_text_style_request;
 mod update_text_style_request_insertion_location;
 
@@ -59,6 +60,7 @@ pub use self::substring_match_criteria::SubstringMatchCriteria;
 pub use self::table_cell_location::TableCellLocation;
 pub use self::update_paragraph_style_request::UpdateParagraphStyleRequest;
 pub use self::update_paragraph_style_request_insertion_loccation::UpdateParagraphStyleRequestInsertionLocation;
+pub use self::update_table_column_properties_request::UpdateTableColumnPropertiesRequest;
 pub use self::update_text_style_request::UpdateTextStyleRequest;
 pub use self::update_text_style_request_insertion_location::UpdateTextStyleRequestInsertionLocation;
 

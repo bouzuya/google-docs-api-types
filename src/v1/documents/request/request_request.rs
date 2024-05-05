@@ -14,6 +14,7 @@ use crate::v1::documents::request::InsertTableRowRequest;
 use crate::v1::documents::request::InsertTextRequest;
 use crate::v1::documents::request::ReplaceAllTextRequest;
 use crate::v1::documents::request::UpdateParagraphStyleRequest;
+use crate::v1::documents::request::UpdateTableColumnPropertiesRequest;
 use crate::v1::documents::request::UpdateTextStyleRequest;
 
 #[allow(clippy::large_enum_variant)]
@@ -37,5 +38,6 @@ pub enum RequestRequest {
     DeleteTableColumn(DeleteTableColumnRequest),
     InsertPageBreak(InsertPageBreakRequest),
     DeletePositionedObject(DeletePositionedObjectRequest),
+    UpdateTableColumnProperties(UpdateTableColumnPropertiesRequest),
     // TODO: ...
 }

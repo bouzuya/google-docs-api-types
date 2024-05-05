@@ -219,6 +219,26 @@ fn test_update_paragraph_style_request() {
 }
 
 #[test]
+fn test_update_table_column_properties_request() {
+    // Adds UpdateTableColumnPropertiesRequest
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::UpdateTableColumnPropertiesRequest;
+    use google_docs_api_types::v1::documents::TableColumnProperties;
+    let _ = Request {
+        request: Some(RequestRequest::UpdateTableColumnProperties(
+            UpdateTableColumnPropertiesRequest {
+                table_start_location: Some(Location::default()),
+                column_indices: Some(vec![usize::default()]),
+                table_column_properties: Some(TableColumnProperties::default()),
+                fields: Some(String::default()),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_update_text_style_request() {
     // Adds UpdateTextStyleRequest and UpdateTextStyleRequestInsertionLocation
     use google_docs_api_types::v1::documents::request::Request;
