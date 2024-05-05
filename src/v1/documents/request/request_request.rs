@@ -6,6 +6,7 @@ use crate::v1::documents::request::DeleteParagraphBulletsRequest;
 use crate::v1::documents::request::DeleteTableColumnRequest;
 use crate::v1::documents::request::DeleteTableRowRequest;
 use crate::v1::documents::request::InsertInlineImageRequest;
+use crate::v1::documents::request::InsertPageBreakRequest;
 use crate::v1::documents::request::InsertTableColumnRequest;
 use crate::v1::documents::request::InsertTableRequest;
 use crate::v1::documents::request::InsertTableRowRequest;
@@ -33,5 +34,6 @@ pub enum RequestRequest {
     InsertTableColumn(InsertTableColumnRequest),
     DeleteTableRow(DeleteTableRowRequest),
     DeleteTableColumn(DeleteTableColumnRequest),
+    InsertPageBreak(InsertPageBreakRequest),
     // TODO: ...
 }

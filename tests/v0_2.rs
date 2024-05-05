@@ -104,6 +104,23 @@ fn test_delete_table_row_request() {
 }
 
 #[test]
+fn test_insert_page_break_request() {
+    // Adds InsertPageBreakRequest
+    use google_docs_api_types::v1::documents::request::InsertPageBreakRequest;
+    use google_docs_api_types::v1::documents::request::InsertPageBreakRequestInsertionLocation;
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::InsertPageBreak(InsertPageBreakRequest {
+            insertion_location: Some(InsertPageBreakRequestInsertionLocation::Location(
+                Location::default(),
+            )),
+        })),
+    };
+}
+
+#[test]
 fn test_insert_table_column_request() {
     // Adds InsertTableColumnRequest
     use google_docs_api_types::v1::documents::request::InsertTableColumnRequest;
