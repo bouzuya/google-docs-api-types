@@ -219,6 +219,31 @@ fn test_update_paragraph_style_request() {
 }
 
 #[test]
+fn test_update_table_cell_style_request() {
+    // Adds UpdateTableCellStyleRequest and TableRange
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::TableCellLocation;
+    use google_docs_api_types::v1::documents::request::TableRange;
+    use google_docs_api_types::v1::documents::request::UpdateTableCellStyleRequest;
+    use google_docs_api_types::v1::documents::request::UpdateTableCellStyleRequestCells;
+    use google_docs_api_types::v1::documents::TableCellStyle;
+    let _ = Request {
+        request: Some(RequestRequest::UpdateTableCellStyle(
+            UpdateTableCellStyleRequest {
+                table_cell_style: Some(TableCellStyle::default()),
+                fields: Some(String::default()),
+                cells: Some(UpdateTableCellStyleRequestCells::TableRange(TableRange {
+                    table_cell_location: Some(TableCellLocation::default()),
+                    row_span: Some(usize::default()),
+                    column_span: Some(usize::default()),
+                })),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_update_table_column_properties_request() {
     // Adds UpdateTableColumnPropertiesRequest
     use google_docs_api_types::v1::documents::request::Location;
