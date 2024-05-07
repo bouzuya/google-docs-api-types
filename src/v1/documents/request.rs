@@ -31,6 +31,7 @@ mod update_paragraph_style_request_insertion_loccation;
 mod update_table_cell_style_request;
 mod update_table_cell_style_request_cells;
 mod update_table_column_properties_request;
+mod update_table_row_style_request;
 mod update_text_style_request;
 mod update_text_style_request_insertion_location;
 
@@ -67,6 +68,7 @@ pub use self::update_paragraph_style_request_insertion_loccation::UpdateParagrap
 pub use self::update_table_cell_style_request::UpdateTableCellStyleRequest;
 pub use self::update_table_cell_style_request_cells::UpdateTableCellStyleRequestCells;
 pub use self::update_table_column_properties_request::UpdateTableColumnPropertiesRequest;
+pub use self::update_table_row_style_request::UpdateTableRowStyleRequest;
 pub use self::update_text_style_request::UpdateTextStyleRequest;
 pub use self::update_text_style_request_insertion_location::UpdateTextStyleRequestInsertionLocation;
 

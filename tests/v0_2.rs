@@ -1,3 +1,5 @@
+use google_docs_api_types::v1::documents::{request::UpdateTableRowStyleRequest, TableRowStyle};
+
 #[test]
 fn test_create_paragraph_bullets_request() {
     // Adds CreateParagraphBulletsRequest and BulletGlyphPreset
@@ -257,6 +259,27 @@ fn test_update_table_column_properties_request() {
                 table_start_location: Some(Location::default()),
                 column_indices: Some(vec![usize::default()]),
                 table_column_properties: Some(TableColumnProperties::default()),
+                fields: Some(String::default()),
+            },
+        )),
+    };
+}
+
+#[test]
+fn test_update_table_row_style_request() {
+    // Adds UpdateTableRowStyleRequest
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::UpdateTableRowStyle(
+            UpdateTableRowStyleRequest {
+                table_start_location: Some(Location {
+                    segment_id: Some(String::default()),
+                    index: Some(usize::default()),
+                }),
+                row_indices: Some(Vec::default()),
+                table_row_style: Some(TableRowStyle::default()),
                 fields: Some(String::default()),
             },
         )),
