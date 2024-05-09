@@ -197,6 +197,20 @@ fn test_insert_table_row_request() {
 }
 
 #[test]
+fn test_merge_table_cells_request() {
+    // Adds  MergeTableCellsRequest
+    use google_docs_api_types::v1::documents::request::MergeTableCellsRequest;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::TableRange;
+    let _ = Request {
+        request: Some(RequestRequest::MergeTableCells(MergeTableCellsRequest {
+            table_range: Some(TableRange::default()),
+        })),
+    };
+}
+
+#[test]
 fn test_replace_image_request() {
     // Adds ReplaceImageRequest and ImageReplaceMethod
     use google_docs_api_types::v1::documents::request::ImageReplaceMethod;
