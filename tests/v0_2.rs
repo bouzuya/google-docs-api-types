@@ -198,7 +198,7 @@ fn test_insert_table_row_request() {
 
 #[test]
 fn test_merge_table_cells_request() {
-    // Adds  MergeTableCellsRequest
+    // Adds MergeTableCellsRequest
     use google_docs_api_types::v1::documents::request::MergeTableCellsRequest;
     use google_docs_api_types::v1::documents::request::Request;
     use google_docs_api_types::v1::documents::request::RequestRequest;
@@ -223,6 +223,22 @@ fn test_replace_image_request() {
             uri: Some(String::default()),
             image_replace_method: Some(ImageReplaceMethod::default()),
         })),
+    };
+}
+
+#[test]
+fn test_unmerge_table_cells_request() {
+    // Adds UnmergeTableCellsRequest
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::TableRange;
+    use google_docs_api_types::v1::documents::request::UnmergeTableCellsRequest;
+    let _ = Request {
+        request: Some(RequestRequest::UnmergeTableCells(
+            UnmergeTableCellsRequest {
+                table_range: Some(TableRange::default()),
+            },
+        )),
     };
 }
 
