@@ -14,6 +14,7 @@ use crate::v1::documents::request::InsertTableRowRequest;
 use crate::v1::documents::request::InsertTextRequest;
 use crate::v1::documents::request::ReplaceAllTextRequest;
 use crate::v1::documents::request::ReplaceImageRequest;
+use crate::v1::documents::request::UpdateDocumentStyleRequest;
 use crate::v1::documents::request::UpdateParagraphStyleRequest;
 use crate::v1::documents::request::UpdateTableCellStyleRequest;
 use crate::v1::documents::request::UpdateTableColumnPropertiesRequest;
@@ -45,5 +46,6 @@ pub enum RequestRequest {
     UpdateTableCellStyle(UpdateTableCellStyleRequest),
     UpdateTableRowStyle(UpdateTableRowStyleRequest),
     ReplaceImage(ReplaceImageRequest),
+    UpdateDocumentStyle(UpdateDocumentStyleRequest),
     // TODO: ...
 }

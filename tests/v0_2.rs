@@ -213,6 +213,23 @@ fn test_replace_image_request() {
 }
 
 #[test]
+fn test_update_document_style_request() {
+    // Adds UpdateDocumentStyleRequest
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::UpdateDocumentStyleRequest;
+    use google_docs_api_types::v1::documents::DocumentStyle;
+    let _ = Request {
+        request: Some(RequestRequest::UpdateDocumentStyle(
+            UpdateDocumentStyleRequest {
+                document_style: Some(DocumentStyle::default()),
+                fields: Some(String::default()),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_update_paragraph_style_request() {
     // Adds UpdateParagraphStyleRequest and UpdateParagraphStyleRequestInsertionLocation
     use google_docs_api_types::v1::documents::request::Request;
