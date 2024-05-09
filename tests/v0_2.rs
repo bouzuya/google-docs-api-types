@@ -1,5 +1,3 @@
-use google_docs_api_types::v1::documents::{request::UpdateTableRowStyleRequest, TableRowStyle};
-
 #[test]
 fn test_create_paragraph_bullets_request() {
     // Adds CreateParagraphBulletsRequest and BulletGlyphPreset
@@ -199,6 +197,22 @@ fn test_insert_table_row_request() {
 }
 
 #[test]
+fn test_replace_image_request() {
+    // Adds ReplaceImageRequest and ImageReplaceMethod
+    use google_docs_api_types::v1::documents::request::ImageReplaceMethod;
+    use google_docs_api_types::v1::documents::request::ReplaceImageRequest;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::ReplaceImage(ReplaceImageRequest {
+            image_object_id: Some(String::default()),
+            uri: Some(String::default()),
+            image_replace_method: Some(ImageReplaceMethod::default()),
+        })),
+    };
+}
+
+#[test]
 fn test_update_paragraph_style_request() {
     // Adds UpdateParagraphStyleRequest and UpdateParagraphStyleRequestInsertionLocation
     use google_docs_api_types::v1::documents::request::Request;
@@ -271,6 +285,8 @@ fn test_update_table_row_style_request() {
     use google_docs_api_types::v1::documents::request::Location;
     use google_docs_api_types::v1::documents::request::Request;
     use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::UpdateTableRowStyleRequest;
+    use google_docs_api_types::v1::documents::TableRowStyle;
     let _ = Request {
         request: Some(RequestRequest::UpdateTableRowStyle(
             UpdateTableRowStyleRequest {
