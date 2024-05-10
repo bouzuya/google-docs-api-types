@@ -1,4 +1,20 @@
 #[test]
+fn test_create_header_request() {
+    // Adds CreateHeaderRequest and HeaderFooterType
+    use google_docs_api_types::v1::documents::request::CreateHeaderRequest;
+    use google_docs_api_types::v1::documents::request::HeaderFooterType;
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::CreateHeader(CreateHeaderRequest {
+            r#type: Some(HeaderFooterType::default()),
+            section_break_location: Some(Location::default()),
+        })),
+    };
+}
+
+#[test]
 fn test_create_paragraph_bullets_request() {
     // Adds CreateParagraphBulletsRequest and BulletGlyphPreset
     use google_docs_api_types::v1::documents::request::BulletGlyphPreset;

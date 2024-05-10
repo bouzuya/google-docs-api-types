@@ -1,3 +1,4 @@
+use crate::v1::documents::request::CreateHeaderRequest;
 use crate::v1::documents::request::CreateNamedRangeRequest;
 use crate::v1::documents::request::CreateParagraphBulletsRequest;
 use crate::v1::documents::request::DeleteContentRangeRequest;
@@ -51,5 +52,6 @@ pub enum RequestRequest {
     UpdateDocumentStyle(UpdateDocumentStyleRequest),
     MergeTableCells(MergeTableCellsRequest),
     UnmergeTableCells(UnmergeTableCellsRequest),
+    CreateHeader(CreateHeaderRequest),
     // TODO: ...
 }
