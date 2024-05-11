@@ -1,3 +1,4 @@
+use crate::v1::documents::request::CreateFooterRequest;
 use crate::v1::documents::request::CreateHeaderRequest;
 use crate::v1::documents::request::CreateNamedRangeRequest;
 use crate::v1::documents::request::CreateParagraphBulletsRequest;
@@ -53,5 +54,6 @@ pub enum RequestRequest {
     MergeTableCells(MergeTableCellsRequest),
     UnmergeTableCells(UnmergeTableCellsRequest),
     CreateHeader(CreateHeaderRequest),
+    CreateFooter(CreateFooterRequest),
     // TODO: ...
 }
