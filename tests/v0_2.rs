@@ -15,6 +15,23 @@ fn test_create_footer_request() {
 }
 
 #[test]
+fn test_create_footnote_request() {
+    // Adds CreateFootnoteRequest and CreateFootnoteRequestFootnoteReferenceLocation
+    use google_docs_api_types::v1::documents::request::CreateFootnoteRequest;
+    use google_docs_api_types::v1::documents::request::CreateFootnoteRequestFootnoteReferenceLocation;
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::CreateFootnote(CreateFootnoteRequest {
+            footnote_reference_location: Some(
+                CreateFootnoteRequestFootnoteReferenceLocation::Location(Location::default()),
+            ),
+        })),
+    };
+}
+
+#[test]
 fn test_create_header_request() {
     // Adds CreateHeaderRequest and HeaderFooterType
     use google_docs_api_types::v1::documents::request::CreateHeaderRequest;

@@ -1,5 +1,7 @@
 mod bullet_glyph_preset;
 mod create_footer_request;
+mod create_footnote_request;
+mod create_footnote_request_footnote_reference_location;
 mod create_header_request;
 mod create_named_range_request;
 mod create_paragraph_bullets_request;
@@ -45,6 +47,8 @@ mod update_text_style_request_insertion_location;
 
 pub use self::bullet_glyph_preset::BulletGlyphPreset;
 pub use self::create_footer_request::CreateFooterRequest;
+pub use self::create_footnote_request::CreateFootnoteRequest;
+pub use self::create_footnote_request_footnote_reference_location::CreateFootnoteRequestFootnoteReferenceLocation;
 pub use self::create_header_request::CreateHeaderRequest;
 pub use self::create_named_range_request::CreateNamedRangeRequest;
 pub use self::create_paragraph_bullets_request::CreateParagraphBulletsRequest;
