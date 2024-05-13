@@ -307,6 +307,23 @@ fn test_merge_table_cells_request() {
 }
 
 #[test]
+fn test_pin_table_header_rows_request() {
+    // Adds PinTableHeaderRowsRequest
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::PinTableHeaderRowsRequest;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::PinTableHeaderRows(
+            PinTableHeaderRowsRequest {
+                table_start_location: Some(Location::default()),
+                pinned_header_rows_count: Some(usize::default()),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_replace_image_request() {
     // Adds ReplaceImageRequest and ImageReplaceMethod
     use google_docs_api_types::v1::documents::request::ImageReplaceMethod;
