@@ -22,6 +22,7 @@ use crate::v1::documents::request::ReplaceNamedRangeContentRequest;
 use crate::v1::documents::request::UnmergeTableCellsRequest;
 use crate::v1::documents::request::UpdateDocumentStyleRequest;
 use crate::v1::documents::request::UpdateParagraphStyleRequest;
+use crate::v1::documents::request::UpdateSectionStyleRequest;
 use crate::v1::documents::request::UpdateTableCellStyleRequest;
 use crate::v1::documents::request::UpdateTableColumnPropertiesRequest;
 use crate::v1::documents::request::UpdateTableRowStyleRequest;
@@ -59,5 +60,6 @@ pub enum RequestRequest {
     CreateFooter(CreateFooterRequest),
     CreateFootnote(CreateFootnoteRequest),
     ReplaceNamedRangeContent(ReplaceNamedRangeContentRequest),
+    UpdateSectionStyle(UpdateSectionStyleRequest),
     // TODO: ...
 }

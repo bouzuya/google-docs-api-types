@@ -355,6 +355,25 @@ fn test_update_paragraph_style_request() {
 }
 
 #[test]
+fn test_update_section_request() {
+    // Adds UpdateSectionStyleRequest
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::request::UpdateSectionStyleRequest;
+    use google_docs_api_types::v1::documents::Range;
+    use google_docs_api_types::v1::documents::SectionStyle;
+    let _ = Request {
+        request: Some(RequestRequest::UpdateSectionStyle(
+            UpdateSectionStyleRequest {
+                range: Some(Range::default()),
+                section_style: Some(SectionStyle::default()),
+                fields: Some(String::default()),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_update_table_cell_style_request() {
     // Adds UpdateTableCellStyleRequest and TableRange
     use google_docs_api_types::v1::documents::request::Request;
