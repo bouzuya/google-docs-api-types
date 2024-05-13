@@ -114,6 +114,6 @@ pub use self::update_text_style_request_insertion_location::UpdateTextStyleReque
 #[derive(Clone, Debug, Default, PartialEq, serde::Deserialize, serde::Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Request {
-    #[serde(flatten)]
+    #[serde(flatten, skip_serializing_if = "Option::is_none")]
     pub request: Option<RequestRequest>,
 }
