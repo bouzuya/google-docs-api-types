@@ -81,6 +81,19 @@ fn test_create_named_range_request() {
 }
 
 #[test]
+fn test_delete_header_request() {
+    // Adds DeleteHeaderRequest
+    use google_docs_api_types::v1::documents::request::DeleteHeaderRequest;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::DeleteHeader(DeleteHeaderRequest {
+            header_id: Some(String::default()),
+        })),
+    };
+}
+
+#[test]
 fn test_delete_named_range_request() {
     // Adds DeleteNamedRangeRequest and DeleteNamedRangeRequestNamedRangeReference
     use google_docs_api_types::v1::documents::request::DeleteNamedRangeRequest;
