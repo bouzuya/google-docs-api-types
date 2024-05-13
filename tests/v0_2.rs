@@ -276,6 +276,30 @@ fn test_replace_image_request() {
 }
 
 #[test]
+fn test_replace_named_range_content_request() {
+    // Adds ReplaceNamedRangeContentRequest, ReplaceNamedRangeContentRequestNamedRangeReference, and ReplaceNamedRangeContentRequestReplacementContent
+    use google_docs_api_types::v1::documents::request::ReplaceNamedRangeContentRequest;
+    use google_docs_api_types::v1::documents::request::ReplaceNamedRangeContentRequestNamedRangeReference;
+    use google_docs_api_types::v1::documents::request::ReplaceNamedRangeContentRequestReplacementContent;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    let _ = Request {
+        request: Some(RequestRequest::ReplaceNamedRangeContent(
+            ReplaceNamedRangeContentRequest {
+                replacement_content: Some(ReplaceNamedRangeContentRequestReplacementContent::Text(
+                    String::default(),
+                )),
+                named_range_reference: Some(
+                    ReplaceNamedRangeContentRequestNamedRangeReference::NamedRangeId(
+                        String::default(),
+                    ),
+                ),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_unmerge_table_cells_request() {
     // Adds UnmergeTableCellsRequest
     use google_docs_api_types::v1::documents::request::Request;

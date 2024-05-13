@@ -18,6 +18,7 @@ use crate::v1::documents::request::InsertTextRequest;
 use crate::v1::documents::request::MergeTableCellsRequest;
 use crate::v1::documents::request::ReplaceAllTextRequest;
 use crate::v1::documents::request::ReplaceImageRequest;
+use crate::v1::documents::request::ReplaceNamedRangeContentRequest;
 use crate::v1::documents::request::UnmergeTableCellsRequest;
 use crate::v1::documents::request::UpdateDocumentStyleRequest;
 use crate::v1::documents::request::UpdateParagraphStyleRequest;
@@ -57,5 +58,6 @@ pub enum RequestRequest {
     CreateHeader(CreateHeaderRequest),
     CreateFooter(CreateFooterRequest),
     CreateFootnote(CreateFootnoteRequest),
+    ReplaceNamedRangeContent(ReplaceNamedRangeContentRequest),
     // TODO: ...
 }
