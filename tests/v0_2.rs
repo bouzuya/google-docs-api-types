@@ -185,6 +185,27 @@ fn test_insert_page_break_request() {
 }
 
 #[test]
+fn test_insert_section_break_request() {
+    // Adds InsertSectionBreakRequest and InsertSectionBreakRequestInsertionLocation
+    use google_docs_api_types::v1::documents::request::InsertSectionBreakRequest;
+    use google_docs_api_types::v1::documents::request::InsertSectionBreakRequestInsertionLocation;
+    use google_docs_api_types::v1::documents::request::Location;
+    use google_docs_api_types::v1::documents::request::Request;
+    use google_docs_api_types::v1::documents::request::RequestRequest;
+    use google_docs_api_types::v1::documents::SectionType;
+    let _ = Request {
+        request: Some(RequestRequest::InsertSectionBreak(
+            InsertSectionBreakRequest {
+                section_type: Some(SectionType::default()),
+                insertion_location: Some(InsertSectionBreakRequestInsertionLocation::Location(
+                    Location::default(),
+                )),
+            },
+        )),
+    };
+}
+
+#[test]
 fn test_insert_table_column_request() {
     // Adds InsertTableColumnRequest
     use google_docs_api_types::v1::documents::request::InsertTableColumnRequest;

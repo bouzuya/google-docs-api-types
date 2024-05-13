@@ -11,6 +11,7 @@ use crate::v1::documents::request::DeleteTableColumnRequest;
 use crate::v1::documents::request::DeleteTableRowRequest;
 use crate::v1::documents::request::InsertInlineImageRequest;
 use crate::v1::documents::request::InsertPageBreakRequest;
+use crate::v1::documents::request::InsertSectionBreakRequest;
 use crate::v1::documents::request::InsertTableColumnRequest;
 use crate::v1::documents::request::InsertTableRequest;
 use crate::v1::documents::request::InsertTableRowRequest;
@@ -61,5 +62,6 @@ pub enum RequestRequest {
     CreateFootnote(CreateFootnoteRequest),
     ReplaceNamedRangeContent(ReplaceNamedRangeContentRequest),
     UpdateSectionStyle(UpdateSectionStyleRequest),
+    InsertSectionBreak(InsertSectionBreakRequest),
     // TODO: ...
 }
