@@ -4,6 +4,7 @@ use crate::v1::documents::request::CreateHeaderRequest;
 use crate::v1::documents::request::CreateNamedRangeRequest;
 use crate::v1::documents::request::CreateParagraphBulletsRequest;
 use crate::v1::documents::request::DeleteContentRangeRequest;
+use crate::v1::documents::request::DeleteFooterRequest;
 use crate::v1::documents::request::DeleteHeaderRequest;
 use crate::v1::documents::request::DeleteNamedRangeRequest;
 use crate::v1::documents::request::DeleteParagraphBulletsRequest;
@@ -65,5 +66,6 @@ pub enum RequestRequest {
     UpdateSectionStyle(UpdateSectionStyleRequest),
     InsertSectionBreak(InsertSectionBreakRequest),
     DeleteHeader(DeleteHeaderRequest),
+    DeleteFooter(DeleteFooterRequest),
     // TODO: ...
 }
