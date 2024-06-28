@@ -1,6 +1,6 @@
 [package]
 name = "google-docs-api-types"
-version = "0.2.3"
+version = "0.2.4"
 authors = ["bouzuya <m@bouzuya.net>"]
 description = "A library crate that provides types for the Google Docs API (unofficial)"
 edition = "2021"
